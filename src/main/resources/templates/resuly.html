@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <title>Резултат</title>
+</head>
+<body>
+
+<h2>Резултат</h2>
+
+<p>Цена: <span th:text="${price}"></span> <span th:text="${currency}"></span></p>
+<p>Платено: <span th:text="${paid}"></span> <span th:text="${currency}"></span></p>
+<p><strong>Ресто: <span th:text="${change}"></span> <span th:text="${currency}"></span></strong></p>
+
+<h3>Разбивка:</h3>
+<ul>
+    <li th:each="entry : ${breakdown}">
+        <span th:text="${entry.key}"></span> :
+        <span th:text="${entry.value}"></span> бр.
+    </li>
+</ul>
+
+<a href="/">Назад</a>
+
+</body>
+</html>
